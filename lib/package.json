@@ -12,6 +12,8 @@
     "test": "test"
   },
   "devDependencies": {
+    "@babel/core": "^7.2.0",
+    "babel-preset-env": "^1.7.0",
     "gulp": "^3.9.1",
     "gulp-babel": "^6.1.1",
     "gulp-notify": "^3.2.0",
