@@ -1,22 +1,12 @@
 {
-  "name": "vue-cli2.9",
-  "version": "1.0.0",
-  "description": "A Vue.js project",
-  "author": "xilanhuadechuntian <Lensgcx@163.com>",
-  "private": true,
+  "name": "cx-vue-webpck-cli",
+  "version": "0.0.1",
+  "description": "cx-vue-webpck-cli for build tools",
+  "author": "BroccoliSpring <Lensgcx@163.com>",
+  "private": false,
+  "main": "build/run/index.js",
   "scripts": {
-    "dev": "cross-env NODE_ENV=development webpack-dev-server --colors --inline --progress --config build/run/run.dev.js",
-    "start": "npm run dev",
-    "unit": "cross-env BABEL_ENV=test karma start build/test/unit/karma.conf.js --single-run",
-    "e2e": "node build/test/e2e/runner.js",
-    "test": "npm run unit && npm run e2e",
-    "lint": "eslint --ext .js,.vue src build/test/unit build/test/e2e/specs",
-    "build": "node build/build.js",
-    "build:prod": "cross-env NODE_ENV=production env_config=prod node build/run/run.build.js",
-    "analyz": "NODE_ENV=production npm_config_report=true npm run build:prod",
-    "command": "./build/command.menu.sh",
-    "command2": "./node_modules/build/command.menu.sh",
-    "command3": "./build3/command.menu.sh"
+    "command": "./build/command.menu.sh"
   },
   "dependencies": {
     "axios": "^0.18.0",
@@ -26,8 +16,9 @@
     "vue-router": "^3.0.1"
   },
   "devDependencies": {
+    "@babel/core": "^7.2.0",
     "autoprefixer": "8.5.0",
-    "babel-core": "6.26.3",
+    "babel-core": "^6.26.3",
     "babel-eslint": "8.2.6",
     "babel-helper-vue-jsx-merge-props": "^2.0.3",
     "babel-loader": "7.1.5",
@@ -52,6 +43,7 @@
     "cross-env": "5.2.0",
     "cross-spawn": "^5.0.1",
     "css-loader": "1.0.0",
+    "cx-vue-webpck-cli": "^0.0.1",
     "eslint": "4.19.1",
     "eslint-config-standard": "^10.2.1",
     "eslint-friendly-formatter": "4.0.1",
