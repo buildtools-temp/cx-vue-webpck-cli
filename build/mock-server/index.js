@@ -1,16 +1,1 @@
-const Mock = require('mockjs');
-const utils = require('../utils/index');
-const bodyParser = require('body-parser');
-const apiConfig = require(utils.rootPath('./mock/index'));
-
-module.exports = function (app) {
-  app.use(bodyParser.urlencoded({extended: false}));
-  app.use(bodyParser.json());
-
-  apiConfig.api.forEach(_conf => {
-    app[_conf.method](_conf.path, _conf.callback ? _conf.callback : function (rep, res) {
-      var json = utils.getJsonFile(_conf.dataFile);
-      res.json(Mock.mock(json));
-    })
-  });
-};
+"use strict";var Mock=require("mockjs"),utils=require("../utils"),bodyParser=require("body-parser"),apiConfig=require(utils.rootPath("./mock/index"));module.exports=function(e){e.use(bodyParser.urlencoded({extended:!1})),e.use(bodyParser.json()),apiConfig.api.forEach(function(i){e[i.method](i.path,i.callback?i.callback:function(e,o){var r=utils.getJsonFile(i.dataFile);o.json(Mock.mock(r))})})};

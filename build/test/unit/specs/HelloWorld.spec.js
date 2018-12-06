@@ -1,11 +1,1 @@
-import Vue from 'vue'
-import HelloWorld from '@/components/HelloWorld'
-
-describe('HelloWorld.vue', () => {
-  it('should render correct contents', () => {
-    const Constructor = Vue.extend(HelloWorld)
-    const vm = new Constructor().$mount()
-    expect(vm.$el.querySelector('.hello h1').textContent)
-      .to.equal('Welcome to Your Vue.js App')
-  })
-})
+"use strict";var _vue=require("vue"),_vue2=_interopRequireDefault(_vue),_HelloWorld=require("@/components/HelloWorld"),_HelloWorld2=_interopRequireDefault(_HelloWorld);function _interopRequireDefault(e){return e&&e.__esModule?e:{default:e}}describe("HelloWorld.vue",function(){it("should render correct contents",function(){var e=(new(_vue2.default.extend(_HelloWorld2.default))).$mount();expect(e.$el.querySelector(".hello h1").textContent).to.equal("Welcome to Your Vue.js App")})});

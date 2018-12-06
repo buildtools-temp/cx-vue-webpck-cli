@@ -1,11 +1,14 @@
 #Design by Broccoli spring( gcx-高仓雄 ) <Lensgcx@163.com>
 #!/usr/bin/env bash
 
+base_path='build' #基础路径
+min_suffix='' #压缩后缀名
+
 update_CX_grid='cx-grid'
 #update_All_list='cx-grid|bootstrap'
 update_All_list='cx-grid'
 
-function Update_base {
+function Fn_update_base {
     clear
     echo '========================== *** Update start *** =========================='
     echo
@@ -37,7 +40,7 @@ function Update_base {
 
 
 # simple script menu
-function Update_node_modules {
+function Fn_update_node_modules {
       clear
       echo '========================== *** Update start *** =========================='
       echo
@@ -53,13 +56,13 @@ function Update_node_modules {
       echo
       echo '========================== *** Update successful *** =========================='
 }
-function Update_CX_grid {
+function Fn_update_CX_grid {
     clear
-    Update_base ${update_CX_grid}
+    Fn_update_base ${update_CX_grid}
 }
-function Update_all {
+function Fn_update_all {
     clear
-    Update_base ${update_All_list}
+    Fn_update_base ${update_All_list}
 }
 function menu {
     clear
@@ -101,11 +104,19 @@ function menu {
     read -n 1 option
 }
 
-function run_dev {
-  cross-env NODE_ENV=development webpack-dev-server --colors --inline --progress --config build/run/run.dev.js
+#run dev
+function Fn_run_dev {
+  NODE_ENV=development env_config=dev webpack-dev-server --colors --inline --progress --config ${base_path}/run/index${min_suffix}.js
 }
-function run_prod {
-  cross-env NODE_ENV=production env_config=prod node build/run/run.build.js
+
+#run mock
+function Fn_run_mock {
+  NODE_ENV=development env_config=mock webpack-dev-server --colors --inline --progress --config ${base_path}/run/index${min_suffix}.js
+}
+
+#run build
+function Fn_run_prod {
+  cross-env NODE_ENV=production env_config=prod node ${base_path}/run/index${min_suffix}.js
 }
 
 while [ 1 ]
@@ -115,25 +126,25 @@ do
         0)
          break ;;
         1)
-         NODE_ENV=development env_config=dev webpack-dev-server --colors --inline --progress --config build/run/run.dev.js ;;
+          Fn_run_dev ;;
         2)
-         NODE_ENV=development env_config=mock webpack-dev-server --colors --inline --progress --config build/run/run.dev.js ;;
+          Fn_run_mock ;;
         3)
-         cross-env NODE_ENV=production env_config=prod node build/run/run.build.js ;;
+         Fn_run_prod ;;
         4)
-         NODE_ENV=production npm_config_report=true cross-env NODE_ENV=production env_config=prod node build/run/run.build.js ;;
+         NODE_ENV=production npm_config_report=true Fn_run_prod ;;
         5)
          eslint --ext .js,.vue src build/test/unit build/test/e2e/specs ;;
         6)
-         cross-env BABEL_ENV=test karma start build/test/unit/karma.conf.js --single-run ;;
+         cross-env BABEL_ENV=test karma start build/test/unit/karma.conf${min_suffix}.js --single-run ;;
         7)
-         node build/test/e2e/runner.js ;;
+         node build/test/e2e/runner${min_suffix}.js ;;
         8)
-         cross-env BABEL_ENV=test karma start build/test/unit/karma.conf.js --single-run && node build/test/e2e/runner.js ;;
+         cross-env BABEL_ENV=test karma start build/test/unit/karma.conf${min_suffix}.js --single-run && node build/test/e2e/runner${min_suffix}.js ;;
         9)
-         Update_node_modules ;;
+         Fn_update_node_modules ;;
         10)
-         Update_all ;;
+         Fn_update_all ;;
         *)
         clear
         echo "Sorry, wrong selection";;
