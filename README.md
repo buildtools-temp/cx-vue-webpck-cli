@@ -13,7 +13,7 @@ npm run command
 
 ```
 ## Menu action
-#  In the action menu, you can execute the following commands:
+### In the action menu, you can execute the following commands:
 
 ``` bash
 
