@@ -1,7 +1,7 @@
 #Design by Broccoli spring( gcx-高仓雄 ) <Lensgcx@163.com>
 #!/usr/bin/env bash
 
-base_path='build' #基础路径
+base_path='node_modules/cx-vue-webpck-cli/build' #基础路径
 min_suffix='' #压缩后缀名
 
 update_CX_grid='cx-grid'
@@ -67,7 +67,7 @@ function Fn_update_all {
 function menu {
     clear
     echo
-    echo -e '\t ========== Design by Broccoli spring( gcx-高仓雄 ) <Lensgcx@163.com> =========='
+    echo -e '\t ========== Design by Broccoli spring( gcx ) =========='
     echo
     echo -e '\t\t\t (  ) (@@) ( )  (@)  ()    @@    O     @     O     @
                          (@@@)
@@ -106,17 +106,17 @@ function menu {
 
 #run dev
 function Fn_run_dev {
-  NODE_ENV=development env_config=dev webpack-dev-server --colors --inline --progress --config ${base_path}/run/index${min_suffix}.js
+  NODE_ENV=development env_config=dev webpack-dev-server --colors --inline --progress --config ${base_path}/run/run.dev${min_suffix}.js
 }
 
 #run mock
 function Fn_run_mock {
-  NODE_ENV=development env_config=mock webpack-dev-server --colors --inline --progress --config ${base_path}/run/index${min_suffix}.js
+  NODE_ENV=development env_config=mock webpack-dev-server --colors --inline --progress --config ${base_path}/run/run.dev${min_suffix}.js
 }
 
 #run build
 function Fn_run_prod {
-  cross-env NODE_ENV=production env_config=prod node ${base_path}/run/index${min_suffix}.js
+  cross-env NODE_ENV=production env_config=prod node ${base_path}/run/run.build${min_suffix}.js
 }
 
 while [ 1 ]
@@ -124,13 +124,16 @@ do
     menu
     case $option in
         0)
-         break ;;
+          break ;;
         1)
-          Fn_run_dev ;;
+          Fn_run_dev
+          break ;;
         2)
-          Fn_run_mock ;;
+          Fn_run_mock
+          break ;;
         3)
-         Fn_run_prod ;;
+         Fn_run_prod
+         break ;;
         4)
          NODE_ENV=production npm_config_report=true Fn_run_prod ;;
         5)
@@ -152,41 +155,3 @@ do
     echo -en "\n\n\t\t\tHit any key to continue"
     read -n 1 line
 done
-
-
-
-
-#list=( "cx-grid" "123" "456" )
-#
-#arrWithParam(){
-#    sw=false;
-#    for loop in "cx-grid" "123" "456"
-#    do
-##        echo "$loop"
-##        echo "$1"
-#        if [[ "$1" =~ "$loop" ]]
-#            then
-#                 sw=true
-#                 break
-#            fi
-#    done
-#    echo $sw
-#}
-#
-#for package in $(npm outdated --parseable --depth=0 | cut -d: -f2)
-#do
-#    echo "================"
-#    echo "$package"
-#    for target in "$list"
-#        do
-#            echo "$target"
-#            state=$(arrWithParam "$package")
-#            if [[ $state == "true" ]];
-#            then
-#                 echo 当前安装的是 "$package"
-#                 cnpm install "$package"
-#
-##                 echo 当前没有安装的是+"$package"
-#            fi
-#        done
-#done
