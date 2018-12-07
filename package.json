@@ -1,15 +1,17 @@
 {
   "name": "cx-vue-webpck-cli",
-  "version": "0.0.7",
+  "version": "0.1.2",
   "description": "cx-vue-webpck-cli for build tools",
   "author": "BroccoliSpring <Lensgcx@163.com>",
   "private": false,
   "main": "build/run/index.js",
   "scripts": {
-    "command": "./build/command.menu.sh",
-    "command2": "./node_modules/cx-vue-webpck-cli/build/command.menu.sh"
+    "command:local": "./build/command.menu.sh",
+    "command:basic": "./node_modules/cx-vue-webpck-cli/build/command.menu.sh"
   },
-  "files":["build"],
+  "files": [
+    "build"
+  ],
   "dependencies": {
     "axios": "^0.18.0",
     "element-ui": "^2.4.11",
@@ -44,7 +46,7 @@
     "cross-env": "5.2.0",
     "cross-spawn": "^5.0.1",
     "css-loader": "1.0.0",
-    "cx-vue-webpck-cli": "^0.0.7",
+    "cx-vue-webpck-cli": "^0.1.2",
     "eslint": "4.19.1",
     "eslint-config-standard": "^10.2.1",
     "eslint-friendly-formatter": "4.0.1",
