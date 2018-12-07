@@ -13,7 +13,7 @@ module.exports = {
     contentBase: path.join(__dirname, '../dist'),       //"./dist/"
 
     host: 'localhost', // can be overwritten by process.env.HOST
-    port: 8001,//端口号
+    port: 8080,//端口号
     inline: true,
     autoOpenBrowser: true,//是否自动打开浏览器
     errorOverlay: true,//当出现编译器错误或警告时，在浏览器中显示全屏覆盖层。默认禁用。
