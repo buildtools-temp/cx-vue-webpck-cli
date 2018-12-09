@@ -1,7 +1,7 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <router-view/>
+    <!--<img src="./assets/logo.png">-->
+    <!--<router-view/>-->
     <h1 @click="login()">登录</h1>
     <h1 @click="clickGET()">测试GET</h1>
     <h1 @click="clickPOST()">测试POST</h1>
@@ -24,7 +24,7 @@
     },
     methods: {
       login() {
-        console.log('login')
+        console.log('login');
         this.$fetch({
             url: '/oauth/login',
             method: 'post',
