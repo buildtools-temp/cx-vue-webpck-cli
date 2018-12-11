@@ -1,5 +1,7 @@
 import axios from 'axios';
 
+console.log('当前运行环境：');
+console.log(process.env);
 const service = axios.create({
   baseURL: process.env.BASE_API,
   timeout: 5000,
@@ -12,7 +14,7 @@ const service = axios.create({
 
 service.interceptors.request.use(
   config => {
-    console.log(config)
+    console.log(config);
     return config;
   },
   error => {
