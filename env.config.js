@@ -8,6 +8,15 @@ const merge = require('webpack-merge');
 const dev_env = {
   NODE_ENV: '"development"',
   ENV_CONFIG: '"dev"',
+  BASE_API: '"192.168.1.210"'
+};
+/**
+ * mock env config
+ * @type {{NODE_ENV: string, ENV_CONFIG: string, BASE_API: string}}
+ */
+const mock_env = {
+  NODE_ENV: '"development"',
+  ENV_CONFIG: '"mock"',
   BASE_API: '""'
 };
 /**
@@ -32,10 +41,11 @@ const test_env = {
 
 /**
  * push module
- * @type {{dev_env: *, prod_env: {NODE_ENV: string, ENV_CONFIG: string, BASE_API: string}, test_env: *}}
+ * @type {{dev_env: *, mock_env: *, prod_env: {NODE_ENV: string, ENV_CONFIG: string, BASE_API: string}, test_env: *}}
  */
 module.exports = {
   dev_env: merge(prod_env, dev_env),
+  mock_env: merge(prod_env, mock_env),
   prod_env: prod_env,
   test_env: merge(dev_env, test_env)
 };
