@@ -13,7 +13,7 @@ module.exports = {
     contentBase: path.join(__dirname, '../dist'),       //"./dist/"
 
     host: 'localhost', // can be overwritten by process.env.HOST
-    port: 8080,//端口号
+    port: 8066,//端口号
     inline: true,
     autoOpenBrowser: true,//是否自动打开浏览器
     errorOverlay: true,//当出现编译器错误或警告时，在浏览器中显示全屏覆盖层。默认禁用。
@@ -43,9 +43,7 @@ module.exports = {
     // If you have problems debugging vue-files in devtools,
     // set this to false - it *may* help
     // https://vue-loader.vuejs.org/en/options.html#cachebusting
-    cacheBusting: true,
-
-
+    cacheBusting: true
   },
 
   build: {
@@ -78,5 +76,16 @@ module.exports = {
     prodCssSourceMap: false,// 是否开启 cssSourceMap
     prodJsSourceMap: false,// 是否开启 jsSourceMap
 
+  },
+  base: {
+    entry: {
+      app: './src/main.js'
+    },
+    aliasPath: [
+      {name: '@core', path: 'core'}
+    ],
+    sassResources:[
+
+    ]
   }
 };
