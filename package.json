@@ -1,6 +1,6 @@
 {
   "name": "cx-vue-webpck-cli",
-  "version": "0.1.10",
+  "version": "0.1.11",
   "description": "cx-vue-webpck-cli for build tools",
   "author": "BroccoliSpring <Lensgcx@163.com>",
   "private": false,
@@ -46,7 +46,7 @@
     "cross-env": "5.2.0",
     "cross-spawn": "^5.0.1",
     "css-loader": "1.0.0",
-    "cx-vue-webpck-cli": "^0.1.10",
+    "cx-vue-webpck-cli": "^0.1.11",
     "eslint": "4.19.1",
     "eslint-config-standard": "^10.2.1",
     "eslint-friendly-formatter": "4.0.1",
