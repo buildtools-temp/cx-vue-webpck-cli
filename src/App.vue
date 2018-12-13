@@ -11,7 +11,8 @@
 
 <script>
   import qs from 'querystring';
-  import insertService from './insertService'
+  import insertService from './insertService';
+  import test from '@core'
 
   export default {
     name: 'App',
@@ -19,6 +20,7 @@
       let a = [1, 2, 3];
       let b = [1, 2, 3];
       console.log([...a, ...b]);
+
       const InsertService = new insertService();
       InsertService.insert();
     },
