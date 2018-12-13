@@ -77,8 +77,6 @@
 </script>
 
 <style rel="stylesheet/scss" lang="scss">
-  @import "assets/style";
-
   #app {
     font-family: 'Avenir', Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
