@@ -53,7 +53,7 @@ module.exports = {
     assetsPublicPath: './', // 编译发布的根目录，可配置为资源服务器域名或 CDN 域名
     assetsRoot: path.resolve(__dirname, './dist'),// 编译输出的静态资源路径
     assetsSubDirectory: 'static',// 编译输出的二级目录
-    entryFolderPath: './src/pages/**/*.js',//入口文件夹目录，从中寻找目标文件
+    favicon: path.resolve('./favicon.ico'),//favicon
     // https://webpack.js.org/configuration/devtool/#production
     devtool: '#source-map',
     // Gzip off by default as many popular static hosts such as
@@ -84,8 +84,9 @@ module.exports = {
     aliasPath: [
       {name: '@core', path: 'core'}
     ],
-    sassResources:[
-
+    sassResources: [
+      // path.resolve('src/assets/css/Mixin/index.scss'),
+      // path.resolve('src/assets/css/_var.scss')
     ]
   }
 };
