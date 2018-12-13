@@ -2,5 +2,6 @@
 /config/
 /dist/
 /src/
+/lib/
 /*.js
 /test/unit/coverage/
