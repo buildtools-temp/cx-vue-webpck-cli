@@ -81,6 +81,11 @@ module.exports = {
     entry: {
       app: './src/main.js'
     },
+    themeConfig: {
+      switch: true,
+      type: 'less',
+      theme: require(path.resolve('theme/normal'))
+    },
     aliasPath: [
       {name: '@core', path: 'core'}
     ],
