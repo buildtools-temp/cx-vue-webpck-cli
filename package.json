@@ -1,6 +1,6 @@
 {
   "name": "cx-vue-webpck-cli",
-  "version": "0.1.11",
+  "version": "0.1.12",
   "description": "cx-vue-webpck-cli for build tools",
   "author": "BroccoliSpring <Lensgcx@163.com>",
   "private": false,
@@ -16,6 +16,7 @@
     "axios": "^0.18.0",
     "element-ui": "^2.4.11",
     "mockjs": "^1.0.1-beta3",
+    "vant": "^1.4.8",
     "vue": "^2.5.21",
     "vue-router": "^3.0.1"
   },
@@ -46,7 +47,7 @@
     "cross-env": "5.2.0",
     "cross-spawn": "^5.0.1",
     "css-loader": "1.0.0",
-    "cx-vue-webpck-cli": "^0.1.11",
+    "cx-vue-webpck-cli": "^0.1.12",
     "eslint": "4.19.1",
     "eslint-config-standard": "^10.2.1",
     "eslint-friendly-formatter": "4.0.1",
@@ -69,6 +70,8 @@
     "karma-sourcemap-loader": "^0.3.7",
     "karma-spec-reporter": "0.0.31",
     "karma-webpack": "^2.0.2",
+    "less": "^3.9.0",
+    "less-loader": "^4.1.0",
     "mini-css-extract-plugin": "^0.4.5",
     "mocha": "^3.2.0",
     "nightwatch": "^0.9.12",
