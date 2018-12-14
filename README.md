@@ -10,6 +10,7 @@ npm install
 
 ##  open command menu
 npm run command
+npm run command:mac
 
 ```
 ## Menu action
