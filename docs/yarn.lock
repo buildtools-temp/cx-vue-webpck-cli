@@ -2709,10 +2709,10 @@ custom-event@~1.0.0:
   resolved "https://registry.yarnpkg.com/custom-event/-/custom-event-1.0.1.tgz#5d02a46850adf1b4a317946a3928fccb5bfd0425"
   integrity sha1-XQKkaFCt8bSjF5RqOSj8y1v9BCU=
 
-cx-vue-webpck-cli@^0.1.23:
-  version "0.1.23"
-  resolved "https://registry.yarnpkg.com/cx-vue-webpck-cli/-/cx-vue-webpck-cli-0.1.23.tgz#9c97b9d8eb0dc45a7ac48ae73ab002302cebc70b"
-  integrity sha512-KJma2u+X5+dn5eWD3rbRw+sf+BDz3sqo/Q7d1d+JVHShmz50QUa++kA1TBkjLlxoVf3WKeK0fmAdOAC41nKwHA==
+cx-vue-webpck-cli@^0.1.26:
+  version "0.1.26"
+  resolved "https://registry.yarnpkg.com/cx-vue-webpck-cli/-/cx-vue-webpck-cli-0.1.26.tgz#bb061c1ea89227718d38925e55fd11d8492f0986"
+  integrity sha512-1z52wBacvUnpJ2kKNI4zdiK2+jEZNjD65xLLx1fSZphtHPGGI/XreAabpWtfbcmS1sLnGbCOo8YVkHbXZxhm1Q==
   dependencies:
     autoprefixer "8.5.0"
     babel-core "^6.26.3"
