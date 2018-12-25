@@ -1,6 +1,6 @@
 {
   "name": "cx-vue-webpck-cli",
-  "version": "0.1.12",
+  "version": "0.1.13",
   "description": "cx-vue-webpck-cli for build tools",
   "author": "BroccoliSpring <Lensgcx@163.com>",
   "private": false,
