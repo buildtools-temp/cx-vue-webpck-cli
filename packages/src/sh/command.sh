@@ -51,7 +51,11 @@ function Fn_update_node_modules {
       echo
 
       rm -rf node_modules
-      cnpm i
+      #cnpm i
+
+      is_yarn
+      yarn install
+
       df -h
 
       echo
@@ -60,10 +64,36 @@ function Fn_update_node_modules {
       echo '========================== *** Update successful *** =========================='
 }
 
-#9、update all plugins
+#10、update all plugins
 function Fn_update_all {
     clear
     Fn_update_base ${update_All_list}
+}
+
+
+function is_cnpm {
+ cnpm -v
+    if [ $? -eq 0 ];
+    then
+        echo cnpm exists
+    else
+        echo 'Your connection to the default npm registry seems to be slow. Use https://registry.npm.taobao.org for faster installation'
+        echo cnpm is not exists
+        npm install -g cnpm --registry=https://registry.npm.taobao.org
+    fi
+}
+
+function is_yarn {
+  yarn -v
+  if [ $? -eq 0 ];
+  then
+       echo tarn exists
+  else
+       echo 'Your connection to the default npm registry seems to be slow. Use yarn please'
+       echo  yarn is not exists
+       is_cnpm
+       cnpm install -g yarn
+  fi
 }
 
 
@@ -74,15 +104,7 @@ function Fn_update_base {
     echo "Start time : `date +%Y-%m-%d,%H:%m:%s`"
     echo
 
-    cnpm -v
-    if [ $? -eq 0 ];
-    then
-        echo cnpm exists
-    else
-        echo 'Your connection to the default npm registry seems to be slow.Use https://registry.npm.taobao.org for faster installation'
-        echo cnpm is not exists
-        npm install -g cnpm --registry=https://registry.npm.taobao.org
-    fi
+    is_cnpm
 
     cnpm install -g npm-check-updates
 
