@@ -1,26 +1,20 @@
 {
   "name": "cx-vue-webpck-cli",
-  "version": "0.1.13",
+  "version": "0.1.23",
   "description": "cx-vue-webpck-cli for build tools",
   "author": "BroccoliSpring <Lensgcx@163.com>",
   "private": false,
-  "main": "build/run/index.js",
+  "main": "lib/run/index.js",
   "scripts": {
-    "command:local": "./build/command.menu.sh",
-    "command:basic": "./node_modules/cx-vue-webpck-cli/build/command.menu.sh"
+    "gulp":  "./gulp.sh"
   },
   "files": [
-    "build"
+    "lib",
+    "package.json",
+    "README.md",
+    "yarn.lock"
   ],
   "dependencies": {
-    "axios": "^0.18.0",
-    "element-ui": "^2.4.11",
-    "mockjs": "^1.0.1-beta3",
-    "vant": "^1.4.8",
-    "vue": "^2.5.21",
-    "vue-router": "^3.0.1"
-  },
-  "devDependencies": {
     "autoprefixer": "8.5.0",
     "babel-core": "^6.26.3",
     "babel-eslint": "8.2.6",
@@ -47,7 +41,6 @@
     "cross-env": "5.2.0",
     "cross-spawn": "^5.0.1",
     "css-loader": "1.0.0",
-    "cx-vue-webpck-cli": "^0.1.12",
     "eslint": "4.19.1",
     "eslint-config-standard": "^10.2.1",
     "eslint-friendly-formatter": "4.0.1",
@@ -104,6 +97,7 @@
     "webpack-dev-server": "3.1.5",
     "webpack-merge": "4.1.4"
   },
+  "devDependencies": {},
   "engines": {
     "node": ">= 6.0.0",
     "npm": ">= 3.0.0"
