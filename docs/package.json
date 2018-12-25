@@ -1,0 +1,37 @@
+{
+  "name": "cx-vue-webpck-cli-demo",
+  "version": "0.0.1",
+  "description": "Demo ( cx-vue-webpck-cli for build tools ）",
+  "author": "BroccoliSpring <Lensgcx@163.com>",
+  "private": false,
+  "main": "src/main.js",
+  "scripts": {
+    "command:local": "./build/menu.sh",
+    "command:basic": "./node_modules/cx-vue-webpck-cli/build/menu.sh",
+    "command": "node_modules\\cx-vue-webpck-cli\\lib\\menu.sh",
+    "command:mac": "node_modules/cx-vue-webpck-cli/lib/menu.sh"
+  },
+  "files": [
+    "build"
+  ],
+  "dependencies": {
+    "axios": "^0.18.0",
+    "element-ui": "^2.4.11",
+    "mockjs": "^1.0.1-beta3",
+    "vant": "^1.4.8",
+    "vue": "^2.5.21",
+    "vue-router": "^3.0.1"
+  },
+  "devDependencies": {
+    "cx-vue-webpck-cli": "^0.1.23"
+  },
+  "engines": {
+    "node": ">= 6.0.0",
+    "npm": ">= 3.0.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 8"
+  ]
+}
