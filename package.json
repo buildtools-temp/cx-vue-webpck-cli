@@ -1,12 +1,12 @@
 {
   "name": "cx-vue-webpck-cli",
-  "version": "0.1.23",
+  "version": "0.1.26",
   "description": "cx-vue-webpck-cli for build tools",
   "author": "BroccoliSpring <Lensgcx@163.com>",
   "private": false,
   "main": "lib/run/index.js",
   "scripts": {
-    "gulp":  "./gulp.sh"
+    "gulp": "./gulp.sh"
   },
   "files": [
     "lib",
