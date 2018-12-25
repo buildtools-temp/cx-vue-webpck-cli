@@ -23,7 +23,7 @@
     "vue-router": "^3.0.1"
   },
   "devDependencies": {
-    "cx-vue-webpck-cli": "^0.1.23"
+    "cx-vue-webpck-cli": "^0.1.26"
   },
   "engines": {
     "node": ">= 6.0.0",
