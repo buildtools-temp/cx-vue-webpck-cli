@@ -1,0 +1,6 @@
+/mock/
+/core/
+/dist/
+/src/
+/*.js
+/test/unit/coverage/
