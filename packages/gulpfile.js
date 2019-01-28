@@ -26,7 +26,10 @@ var showinfo = function () {
 gulp.task('js-handle', function () {
   gulp.src(_base_path + '**/*.js')
     .pipe(babel())
-    .pipe(uglify())
+    .pipe(uglify({
+      mangle: true,
+      compress: true
+    }))
     // .pipe(rename({suffix: '.min'}))
     .pipe(gulp.dest(_base_dist_path))
     .on('error', function (err) {
