@@ -6,8 +6,8 @@
   "private": false,
   "main": "src/main.js",
   "scripts": {
-    "command:local": "./build/menu.sh",
-    "command:basic": "./node_modules/cx-vue-webpck-cli/build/menu.sh",
+    "command:local": "../lib/menu.sh",
+    "command:basic": "../node_modules/cx-vue-webpck-cli/build/menu.sh",
     "command": "node_modules\\cx-vue-webpck-cli\\lib\\menu.sh",
     "command:mac": "node_modules/cx-vue-webpck-cli/lib/menu.sh"
   },
@@ -23,7 +23,7 @@
     "vue-router": "^3.0.1"
   },
   "devDependencies": {
-    "cx-vue-webpck-cli": "^0.1.26"
+    "cx-vue-webpck-cli": "^0.2.1"
   },
   "engines": {
     "node": ">= 6.0.0",
